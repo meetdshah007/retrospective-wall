@@ -1,4 +1,4 @@
-<div [class]="'card ' + cardType">
+<div [class]="'card ' + activeType" [ngClass]="{'text-white': markActive}">
   <div class="card-body">
     {{data?.desc}}
   </div>

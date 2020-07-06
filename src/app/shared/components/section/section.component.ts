@@ -5,6 +5,7 @@ import { take } from 'rxjs/operators';
 import { Card } from '../../models/card';
 import { CardFormModalComponent } from '../card-form-modal/card-form-modal.component';
 import { Section } from '../../models/section';
+import { FocusService } from '../../services/focus.service';
 
 @Component({
   selector: 'app-section',
@@ -26,6 +27,7 @@ export class SectionComponent {
 
   constructor(
     private modalService: BsModalService,
+    private focusService: FocusService
   ) { }
 
   /**
@@ -37,6 +39,7 @@ export class SectionComponent {
       cardData: null
     };
     this.showModal(initialState);
+    this.setFocus(null);
   }
 
   /**
@@ -49,6 +52,7 @@ export class SectionComponent {
       cardData: card
     };
     this.showModal(initialState);
+    this.setFocus(card.id);
   }
 
   /**
@@ -69,8 +73,18 @@ export class SectionComponent {
           index = this.cards.length;
         }
         this.cards[index] = value;
+        this.setFocus(value.id);
       }
     });
+  }
+
+  /**
+   * Utility method to remove and select the focus on the card.
+   * Based on the user interaction we set and remove the focus.
+   * @param id Optional value. based on given id focus will be set.
+   */
+  setFocus(id?: number): void {
+    this.focusService.markActive(id);
   }
 
 }
