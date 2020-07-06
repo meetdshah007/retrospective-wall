@@ -4,10 +4,11 @@
   padding: 10px;
   flex: 1;
   background-color: #FAFAFA;
-  min-height: 100px;
+  min-height: 230px;
   app-card {
     display: flex;
     width: 100%;
+    max-width: 30%;
   }
 }
 
@@ -20,6 +21,7 @@
     app-card {
       display: flex;
       flex: 0;
+      max-width: 100%;
     }
   }
 }

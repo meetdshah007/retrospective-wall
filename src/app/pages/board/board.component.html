@@ -1,15 +1,5 @@
 <div class="row board-wrapper">
-  <div class="col-sm-12 col-md-6">
-    <app-section [heading]="{'title': 'What went well'}"></app-section>
-  </div>
-  <div class="col-sm-12 col-md-6">
-    <app-section [heading]="{'title': 'What can be improved'}"></app-section>
-  </div>
-
-  <div class="col-sm-12 col-md-6">
-    <app-section [heading]="{'title': 'Start doing'}"></app-section>
-  </div>
-  <div class="col-sm-12 col-md-6">
-    <app-section [heading]="{'title': 'Action Items'}"></app-section>
+  <div class="col-sm-12 col-md-6 py-2" *ngFor="let section of sections;">
+    <app-section [heading]="section"></app-section>
   </div>
 </div>

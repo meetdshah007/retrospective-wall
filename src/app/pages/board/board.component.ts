@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Section } from 'src/app/shared/models/section';
 
 @Component({
   selector: 'app-board',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardComponent implements OnInit {
 
-  constructor() { }
+  /**
+   * SectionType Array. contains the titles of the section.
+   * It will create the section on the screen.
+   */
+  sections: Section[] = [];
 
   ngOnInit() {
+    this.sections = [{
+      title: 'What went well'
+    }, {
+      title: 'What can be improved'
+    }, {
+      title: 'Start doing'
+    }, {
+      title: 'Action Items'
+    }];
   }
 
 }
