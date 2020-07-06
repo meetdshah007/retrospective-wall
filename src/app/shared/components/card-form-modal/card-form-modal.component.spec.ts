@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { BsModalRef } from 'ngx-bootstrap/modal';
 
 import { CardFormModalComponent } from './card-form-modal.component';
+import { RetroBoardImports } from '../../../testing/retro-board-imports';
 
 describe('CardFormModalComponent', () => {
   let component: CardFormModalComponent;
@@ -8,7 +10,13 @@ describe('CardFormModalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CardFormModalComponent ]
+      declarations: [ CardFormModalComponent ],
+      imports: [
+        ...RetroBoardImports
+      ],
+      providers: [
+        { provide: BsModalRef, value: BsModalRef }
+      ]
     })
     .compileComponents();
   }));

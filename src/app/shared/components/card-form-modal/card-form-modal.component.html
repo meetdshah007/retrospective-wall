@@ -1,1 +1,15 @@
-<p>card-form-modal works!</p>
+<div class="modal-header">
+  <h4 class="modal-title">{{btnTitle}} Ticket</h4>
+  <button type="button" class="close float-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="description">Description <span class="text-danger">*</span></label>
+      <input rows=5 class="form-control" id="description" formControlName="desc" placeholder="i.e. Performed operation on multiple files">
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="cardForm?.invalid">{{btnTitle}}</button>
+  </form>
+</div>

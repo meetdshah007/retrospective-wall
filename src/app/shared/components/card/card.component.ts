@@ -8,6 +8,9 @@ import { Card } from '../../models/card';
 })
 export class CardComponent implements OnInit {
 
+  /**
+   * Card description and id to display on the HTML.
+   */
   @Input() data: Card;
 
   constructor() { }

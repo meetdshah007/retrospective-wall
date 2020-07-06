@@ -1,0 +1,25 @@
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  flex: 1;
+  background-color: #FAFAFA;
+  min-height: 100px;
+  app-card {
+    display: flex;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .card-wrapper {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: auto;
+    min-height: 60px;
+    app-card {
+      display: flex;
+      flex: 0;
+    }
+  }
+}
