@@ -13,6 +13,12 @@ export class CardComponent implements OnInit {
    */
   @Input() data: Card;
 
+  /**
+   * Style of the card.
+   * i.e. 'border-primary' Supports all the bootstrap styleguides.
+   */
+  @Input() cardType: string;
+
   constructor() { }
 
   ngOnInit() {
