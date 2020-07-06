@@ -43,7 +43,11 @@ export class SectionComponent {
    * @param card Card type object consist of {id: number and desc: string} values. mandatory parameter.
    */
   onEdit(card: Card) {
-
+    const initialState = {
+      btnTitle: 'Update',
+      cardData: card
+    };
+    this.showModal(initialState);
   }
 
   /**
