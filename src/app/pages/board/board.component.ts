@@ -16,13 +16,17 @@ export class BoardComponent implements OnInit {
 
   ngOnInit() {
     this.sections = [{
-      title: 'What went well'
+      title: 'What went well',
+      sectionType: 'border-primary'
     }, {
-      title: 'What can be improved'
+      title: 'What can be improved',
+      sectionType: 'border-success'
     }, {
-      title: 'Start doing'
+      title: 'Start doing',
+      sectionType: 'border-info'
     }, {
-      title: 'Action Items'
+      title: 'Action Items',
+      sectionType: 'border-warning'
     }];
   }
 

@@ -1,10 +1,10 @@
 <div class="section-wrapper w-100">
-  <h5 class="d-inline">{{heading?.title}}</h5>
+  <h5 class="d-inline">{{data?.title}}</h5>
   <button class="btn btn-link" (click)="onAdd()">+ Add</button>
 
   <div class="row">
     <div class="card-wrapper">
-      <app-card class="m-2" *ngFor="let card of cards;" [data]="card" [cardType]="'border-primary'" (click)="onEdit(card)"></app-card>
+      <app-card class="m-2" *ngFor="let card of cards;" [data]="card" [cardType]="data.sectionType" (click)="onEdit(card)"></app-card>
     </div>
   </div>
 </div>

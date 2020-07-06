@@ -24,4 +24,11 @@ describe('BoardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have 4 sections on the screen', () => {
+    component.ngOnInit();
+    fixture.detectChanges();
+    expect(component.sections.length).toBe(4);
+  });
+
 });

@@ -4,6 +4,7 @@ import { take } from 'rxjs/operators';
 
 import { Card } from '../../models/card';
 import { CardFormModalComponent } from '../card-form-modal/card-form-modal.component';
+import { Section } from '../../models/section';
 
 @Component({
   selector: 'app-section',
@@ -15,7 +16,7 @@ export class SectionComponent {
   /**
    * Passing the section headings from the board.
    */
-  @Input() heading: any;
+  @Input() data: Section;
 
   /**
    * Array of the cards to display on the screen.
